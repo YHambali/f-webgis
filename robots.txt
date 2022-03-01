@@ -1,0 +1,8 @@
+User-agent: *
+Disallow:/auth-faylogic
+Disallow:/master
+Disallow:/konten
+Disallow:/media
+Disallow:/inbox
+
+Sitemap: https://faylogic.com/sitemap.xml
