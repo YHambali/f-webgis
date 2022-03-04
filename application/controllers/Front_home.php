@@ -13,12 +13,14 @@ class Front_home extends CI_Controller
 	{
 		$data = array(
 			'title_bar' => 'Home',
+			'br_title'  => 's',
+			'br_title_active' => '',
 			'menu' 		=> '',			
 			'deskripsi' => '',			
 
 			// META
 			'deskripsi' => '',
-			'title'		=> '',
+			'title'		=> 'Dashboard',
 			'keywords'  => '',
 
 			// OPEN GRAPH

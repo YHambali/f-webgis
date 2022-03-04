@@ -95,7 +95,7 @@ class Back_blog extends MY_Controller
 		if ($stat == 'new') 
 		{
 			$tgl_blog 	= date('Y-m-d');
-			$id = $this->M_crud->id_num_month_year('tb_blog','id_blog','tgl_blog');
+			$id = $this->M_crud->id_num_month_year('tb_blog','id_blog',' tgl_blog');
 		}
 
 		$set_data = array(

@@ -1,25 +1,38 @@
-<header id="page-topbar" >
+<header id="page-topbar">
     <div class="navbar-header">
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                
-                <a href="<?php echo base_url() ?>dashboard" class="logo logo-light">
+                <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="<?php echo base_url()?>assets_back/images/logo-sm-light.png" alt="" height="45">
+                        <img src="assets/images/logo-sm-dark.png" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="<?php echo base_url()?>assets_back/images/logo-light.png" alt="" height="45">
+                        <img src="assets/images/logo-dark.png" alt="" height="20">
+                    </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="assets/images/logo-sm-light.png" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/logo-light.png" alt="" height="20">
                     </span>
                 </a>
             </div>
 
-            <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
+            <button type="button" class="btn btn-sm px-3 font-size-24 d-lg-none header-item" data-toggle="collapse" data-target="#topnav-menu-content">
                 <i class="ri-menu-2-line align-middle"></i>
             </button>
 
-           
-            
+            <!-- App Search-->
+            <form class="app-search d-none d-lg-block">
+                <div class="position-relative">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <span class="ri-search-line"></span>
+                </div>
+            </form>            
         </div>
 
         <div class="d-flex">
@@ -43,6 +56,25 @@
                         </div>
                     </form>
                 </div>
+            </div>
+
+            
+
+            
+
+            <div class="dropdown d-none d-lg-inline-block ml-1">
+                <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                    <i class="ri-fullscreen-line"></i>
+                </button>
+            </div>
+
+            
+            
+
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                    <i class="ri-settings-2-line"></i>
+                </button>
             </div>
             
         </div>

@@ -116,6 +116,24 @@ class M_crud extends CI_Model
 	  	return $year.$kd;
 	}
 
+	function id_num_year_var($table,$id,$colom,$var)
+	{
+		$year =date('Y',strtotime($var));
+		$this->db->select_max('substr('.$id.', 5,4)','kd_max');
+		$this->db->where('extract(year from '.$colom.')=',$year);
+		$q = $this->db->get($table);  		
+		$kd = "";
+		if($q->num_rows() > 0){
+		   foreach($q->result() as $k){
+			   $tmp = ((int)$k->kd_max)+1;
+			   $kd = sprintf("%04s", $tmp);
+		   }
+		}else{
+		   $kd = "0001";
+		}
+		return $year.$kd;
+	}
+
 	function id_num_month_year($table,$id,$colom)
 	{
 		$year =date('Y');
