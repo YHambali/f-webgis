@@ -1,10 +1,10 @@
 <?php
 class M_rekam_bencana extends CI_Model
 {	
-    var $table          = 'tb_rekam_bencana'; //nama tabel dari database
-    var $column_order   = array(null,'id_rekam_bencana'); //field yang ada di table user
-    var $column_search  = array('id_rekam_bencan'); //field yang diizin untuk pencarian 
-    var $order          = array('id_rekam_bencan' => 'asc'); // default order 
+    var $table          = 'v_rekam_bencana'; //nama tabel dari database
+    var $column_order   = array(null,'nm_kecamatan','nm_desa','nm_bencana','tgl_bencana','ket_bencana'); //field yang ada di table user
+    var $column_search  = array('nm_kecamatan','nm_desa','nm_bencana','tgl_bencana','ket_bencana'); //field yang diizin untuk pencarian 
+    var $order          = array('nm_kecamatan','nm_desa','nm_bencana','tgl_bencana','ket_bencana' => 'asc'); // default order 
 
     private function _get_datatables_query()
     {         

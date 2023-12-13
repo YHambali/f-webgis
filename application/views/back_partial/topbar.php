@@ -6,10 +6,10 @@
                 
                 <a href="<?php echo base_url() ?>dashboard" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="<?php echo base_url()?>assets_back/images/logo-sm-light.png" alt="" height="45">
+                        <img src="<?php echo base_url()?>file/logo/logo-sm-light.png" alt="" height="45">
                     </span>
                     <span class="logo-lg">
-                        <img src="<?php echo base_url()?>assets_back/images/logo-light.png" alt="" height="45">
+                        <img src="<?php echo base_url()?>file/logo/logo-light.png" alt="" height="45">
                     </span>
                 </a>
             </div>

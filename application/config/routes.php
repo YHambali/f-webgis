@@ -52,33 +52,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Front_home';
 
 // FRONTEND
+$route['peta-sebaran-daerah-rawan-bencana']     = 'Front_peta_rawan_bencana';
+$route['data-wilayah-karawang']                 = 'Front_data_wilayah_karawang';
+$route['data-bencana']                          = 'Front_data_bencana';
 
 // BACKEND
-$route['auth-faylogic'] 			= 'Back_login';
-$route['auth-faylogic/proses'] 		= 'Back_login/proses';
-$route['logout']			        = 'Back_logout/logout';
-$route['dashboard'] 		        = 'Back_dashboard';
+$route['login'] 			            = 'Back_login';
+$route['login/proses'] 		            = 'Back_login/proses';
+$route['logout']			                    = 'Back_logout/logout';
+$route['dashboard'] 		                    = 'Back_dashboard';
 
-$route['konten/data-bencana']       = 'Back_bencana';
-$route['konten/data-kecamatan']     = 'Back_kecamatan';
-$route['konten/data-desa']          = 'Back_desa';
-$route['konten/data-rekam-bencana'] = 'Back_rekam_bencana';
-
-
-
-$route['master/kategori-blog']  	= 'Back_kat_blog';
-$route['master/kategori-kegiatan']  = 'Back_kat_kegiatan';
-$route['master/kategori-product']   = 'Back_kat_product';
-$route['master/kategori-gallery']   = 'Back_kat_gallery';
-$route['master/tags'] 				= 'Back_tags';
-$route['master/faq'] 				= 'Back_faq';
-$route['master/kategori-portfolio'] = 'Back_kat_portfolio';
-
-$route['konten/blog'] 				= 'Back_blog';
-$route['konten/blog/add']			= 'Back_blog/tambah_data';
-$route['konten/blog/edit'] 			= 'Back_blog/edit_data';
-
-// $route['user'] 						= 'Back_user';
+$route['konten/data-bencana']                   = 'Back_bencana';
+$route['konten/data-kecamatan']                 = 'Back_kecamatan';
+$route['konten/data-desa']                      = 'Back_desa';
+$route['konten/data-rekam-bencana']             = 'Back_rekam_bencana';
+$route['konten/data-rekam-bencana/add']         = 'Back_rekam_bencana/tambah_data';
+$route['konten/data-rekam-bencana/edit']        = 'Back_rekam_bencana/edit_data';
+$route['konten/data-daerah-rawan-bencana']      = 'Back_rawan_bencana';
+$route['konten/data-daerah-rawan-bencana/add']  = 'Back_rawan_bencana/tambah_data';
+$route['konten/data-daerah-rawan-bencana/edit'] = 'Back_rawan_bencana/edit_data';
+$route['data-user'] 				= 'Back_user';
 
 $route['sitemap'] 					= 'Sitemap';
 $route['sitemap.xml'] 				= 'Sitemap';

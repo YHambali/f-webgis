@@ -136,7 +136,21 @@ class Back_bencana extends MY_Controller
         }
         else
         {
-            $this->M_crud->del_data('tb_bencana',array('id_bencana' => $id));
+            $boleh = 1;
+            // Cek Ke Data Rekam Bencana
+            $cek_data_rekam_bencana = $this->M_crud->tampil_data_where('v_rekam_bencana',array('id_bencana' => $id))->result_array();
+            if (count($cek_data_rekam_bencana) > 0) 
+            {
+                $hasil = 0;
+                $err   = "Data Tidak Dapat Dihapus, Terdapat di Data Rekam Bencana !";
+                $boleh = 0;
+            }
+
+
+            if ($boleh == 1) 
+            {
+                $this->M_crud->del_data('tb_bencana',array('id_bencana' => $id));
+            }
         }
 		
         $data = array(

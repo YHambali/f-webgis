@@ -40,21 +40,17 @@
                                 <div class="card">              
                                     <div class="card-body">
                                         <h4 class="card-title">Data User</h4>                          
-                                        <!-- <a href="javascript:void(0)" id="tambah_data" onclick="tambah_data()" class="btn btn-success btn-sm"><i class="fas fa-plus"></i> Tambah Data</a>                                             -->
+                                        <a href="javascript:void(0)" id="tambah_data" onclick="tambah_data()" class="btn btn-success btn-sm"><i class="fas fa-plus"></i> Tambah Data</a>                                            
                                         <p>  
                                         <div style="max-width: auto; overflow-x: auto;">
                                             <table id="datatable1" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                 <thead>
                                                 <tr>
                                                     <th>No</th>
-                                                    <!-- <th>Action</th> -->
+                                                    <th>Action</th>
                                                     <th>ID User</th>
                                                     <th>Username</th>
-                                                    <th>Password</th>
-                                                    <th>Nama Lengkap</th>
-                                                    <th>Alamat</th>
-                                                    <th>Email</th>
-                                                    <th>No HP</th>
+                                                    <th>Password</th>                                                   
                                                     <th>Status</th>                                                    
                                                 </tr>
                                                 </thead>

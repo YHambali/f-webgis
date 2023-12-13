@@ -1,9 +1,9 @@
 <?php
 class M_desa extends CI_Model
 {	
-    var $table          = 'tb_desa'; //nama tabel dari database
-    var $column_order   = array(null,'id_desa','nm_desa'); //field yang ada di table user
-    var $column_search  = array('id_desa','nm_desa'); //field yang diizin untuk pencarian 
+    var $table          = 'v_desa'; //nama tabel dari database
+    var $column_order   = array(null,'nm_kecamatan','nm_desa'); //field yang ada di table user
+    var $column_search  = array('nm_kecamatan','nm_desa'); //field yang diizin untuk pencarian 
     var $order          = array('id_desa' => 'asc'); // default order 
 
     private function _get_datatables_query()

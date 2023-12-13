@@ -24,7 +24,7 @@
                                         <div>
                                             <div class="text-center">
                                                 <div>
-                                                    <a href="<?php echo base_url()?>" class="logo"><img style="width: 300px;" src="<?php echo base_url() ?>assets_back/images/logo-dark.png" alt="logo"></a>
+                                                    <a href="<?php echo base_url()?>" class="logo"><img style="width: 300px;" src="<?php echo base_url() ?>file/logo/logo-dark.png" alt="logo"></a>
                                                 </div>
     
                                                 <h4 class="font-size-18 mt-4">Welcome Back !</h4>

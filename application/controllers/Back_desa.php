@@ -32,7 +32,7 @@ class Back_desa extends MY_Controller
             $row[] = '<a href="javascript:void(0)" onclick="edit_data(this)" id="edit" data-id="'.$field->id_desa.'" class="btn btn-warning btn-sm" title="Edit"><i class="fas fa-edit"></i></a>
             <a href="javascript:void(0)" onclick="delete_data(this)" id="delete" data-id="'.$field->id_desa.'" class="btn btn-danger btn-sm" title="Delete"><i class="fas fa-trash"></i></a>
             ';          
-            $row[] = $field->id_kecamatan;                     
+            $row[] = $field->nm_kecamatan;                     
             $row[] = $field->nm_desa;                     
             $data[] = $row;
         }
@@ -131,8 +131,7 @@ class Back_desa extends MY_Controller
         $id = $this->input->post('id_desa');
         $hasil = 1;
         $err = '';
-        $cek_data = $this->M_crud->tampil_data_where('tb_desa',array('id_desa' => $id))->result_array();
-		
+        $cek_data = $this->M_crud->tampil_data_where('tb_desa',array('id_desa' => $id))->result_array();		
         if (count($cek_data) == 0) 
         {
             $hasil = 0;
@@ -140,7 +139,29 @@ class Back_desa extends MY_Controller
         }
         else
         {
-            $this->M_crud->del_data('tb_desa',array('id_desa' => $id));
+            $boleh = 1;
+            // Cek Ke Data Rekam Bencana
+            $cek_data_rekam_bencana = $this->M_crud->tampil_data_where('v_rekam_bencana',array('id_desa' => $id))->result_array();
+            if (count($cek_data_rekam_bencana) > 0) 
+            {
+                $hasil = 0;
+                $err   = "Data Tidak Dapat Dihapus, Terdapat di Data Rekam Bencana !";
+                $boleh = 0;
+            }
+
+            // Cek Ke Data Rawan Bencana
+            $cek_data_rawan_bencana = $this->M_crud->tampil_data_where('v_daerah_rawan_bencana',array('id_desa' => $id))->result_array();
+            if (count($cek_data_rawan_bencana) > 0) 
+            {
+                $hasil = 0;
+                $err   = "Data Tidak Dapat Dihapus, Terdapat di Data Rawan Bencana !";
+                $boleh = 0;
+            }
+
+            if ($boleh == 1) 
+            {
+                $this->M_crud->del_data('tb_desa',array('id_desa' => $id));
+            }
         }
 		
         $data = array(

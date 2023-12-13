@@ -136,7 +136,29 @@ class Back_kecamatan extends MY_Controller
         }
         else
         {
-            $this->M_crud->del_data('tb_kecamatan',array('id_kecamatan' => $id));
+            $boleh = 1;
+            // Cek Ke Data Rekam Bencana
+            $cek_data_rekam_bencana = $this->M_crud->tampil_data_where('v_rekam_bencana',array('id_kecamatan' => $id))->result_array();
+            if (count($cek_data_rekam_bencana) > 0) 
+            {
+                $hasil = 0;
+                $err   = "Data Tidak Dapat Dihapus, Terdapat di Data Rekam Bencana !";
+                $boleh = 0;
+            }
+
+            // Cek Ke Data Rawan Bencana
+            $cek_data_rawan_bencana = $this->M_crud->tampil_data_where('v_daerah_rawan_bencana',array('id_kecamatan' => $id))->result_array();
+            if (count($cek_data_rawan_bencana) > 0) 
+            {
+                $hasil = 0;
+                $err   = "Data Tidak Dapat Dihapus, Terdapat di Data Rawan Bencana !";
+                $boleh = 0;
+            }
+
+            if ($boleh == 1) 
+            {
+                $this->M_crud->del_data('tb_kecamatan',array('id_kecamatan' => $id));
+            }
         }
 		
         $data = array(

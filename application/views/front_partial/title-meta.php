@@ -4,4 +4,4 @@
 <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
 <meta content="Themesdesign" name="author" />
 <!-- App favicon -->
-<link rel="shortcut icon" href="<?php echo base_url()?>assets_back/images/favicon.png">
+<link rel="shortcut icon" href="<?php echo base_url()?>file/logo/favicon.png">

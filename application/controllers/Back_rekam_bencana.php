@@ -16,7 +16,7 @@ class Back_rekam_bencana extends MY_Controller
             'br_title' 		  => $this->uri->segment('1'),//Breadcumb
             'br_title_active' => $this->uri->segment('2'),//Breadcumb
         );
-        $this->load->view('back/blog',$data);
+        $this->load->view('back/rekam_bencana',$data);
     }
 
     function tampil_data()
@@ -28,11 +28,12 @@ class Back_rekam_bencana extends MY_Controller
             $no++;
             $row = array();
             $row[] = $no;  
-            $row[] = '<a href="javascript:void(0)" onclick="edit_data(this)" id="edit" data-id="'.$field->id_rekam_bencana.'" class="btn btn-warning btn-sm" title="Edit"><i class="fas fa-edit"></i></a>
+            $row[] = '<a href="'.base_url().'konten/data-rekam-bencana/edit?id='.$field->id_rekam_bencana.'" id="edit" class="btn btn-warning btn-sm" title="Edit"><i class="fas fa-edit"></i></a>
             <a href="javascript:void(0)" onclick="delete_data(this)" id="delete" data-id="'.$field->id_rekam_bencana.'" class="btn btn-danger btn-sm" title="Delete"><i class="fas fa-trash"></i></a>
             ';          
-            $row[] = $field->id_desa;
-            $row[] = $field->id_bencana;
+            $row[] = $field->nm_kecamatan;
+            $row[] = $field->nm_desa;
+            $row[] = $field->nm_bencana;
             $row[] = $field->tgl_bencana;
             $row[] = $field->ket_bencana;                     
             $row[] = '<a href="'.base_url().'file/rekam_bencana/'.$field->file_dokumentasi.'" target="_blank" class="btn btn-primary btn-sm" title="Edit"><i class="fas fa-file-alt"></i> Lihat Dokumentasi</a>';                     
@@ -124,10 +125,10 @@ class Back_rekam_bencana extends MY_Controller
                 {
                     $data_upload = $this->upload->data();                
                     $set_data['file_dokumentasi'] = $data_upload['file_name'];
+                    $this->M_crud->ins_data('tb_rekam_bencana',$set_data);
                 }
             }
 
-            $this->M_crud->ins_data('tb_rekam_bencana',$set_data);
         }
         else
         {
@@ -176,16 +177,21 @@ class Back_rekam_bencana extends MY_Controller
                 }
 
                 $this->M_crud->upd_data('tb_rekam_bencana',$set_data,array('id_rekam_bencana' => $id));
-            }
-
-            $data = array(
-                'hasil' => $hasil,
-                'err'	=> $err,
-            );
-
-            echo json_encode($data);
-            
+            }   
+            else
+            {
+                $hasil = 0;
+                $err   = "Data Tidak Ditemukan !";
+            }         
+    
         }
+
+        $data = array(
+            'hasil' => $hasil,
+            'err'	=> $err,
+        );
+
+        echo json_encode($data);
     }
 
     function edit_data()
@@ -232,7 +238,7 @@ class Back_rekam_bencana extends MY_Controller
         {
             if ($cek_data[0]['file_dokumentasi'] != '' || $cek_data[0]['file_dokumentasi'] != NULL) 
             {
-                unlink("./file/blog/".$cek_data[0]['file_dokumentasi']."");  
+                unlink("./file/rekam_bencana/".$cek_data[0]['file_dokumentasi']."");  
             }
             $this->M_crud->del_data('tb_rekam_bencana',array('id_rekam_bencana' => $id));
         }

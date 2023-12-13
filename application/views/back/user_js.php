@@ -112,8 +112,7 @@
 						$('#form-modal').modal('show');
 						$('.modal-title').text('Edit Data User');
 						$('#id_user').val(v.id_user);
-						$('#username').val(v.username);
-						$('#tanggal').val(v.tanggal);
+						$('#username').val(v.usr);
 
 					});
 				}

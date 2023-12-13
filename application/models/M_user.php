@@ -2,8 +2,8 @@
 class M_user extends CI_Model
 {	
 	var $table = 'tb_user'; //nama tabel dari database
-	var $column_order = array('id_user, username, password, status'); //field yang ada di table user
-	var $column_search = array('id_user, username, password, status'); //field yang diizin untuk pencarian 
+	var $column_order = array('id_user, usr, status_aktif'); //field yang ada di table user
+	var $column_search = array('id_user, usr, status_aktif'); //field yang diizin untuk pencarian 
 	var $order = array('id_user' => 'asc'); // default order 
 	
 	function __construct()

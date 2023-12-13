@@ -21,7 +21,6 @@ class Back_user extends CI_Controller {
 
 	function tampil_data()
 	{
-        $this->db->where('level',0);
 		$list = $this->M_user->get_datatables();
         $data = array();
         $no = $_POST['start'];
@@ -32,19 +31,16 @@ class Back_user extends CI_Controller {
             {
                 $status_aktif = "<a class='btn btn-sm btn-success' href='javascript:void(0)' onclick='status_aktif(this)' data-id='".$field->id_user."'>AKTIF</a>";
             }
+
             $no++;
             $row = array();
             $row[] = $no;  
-            // $row[] = '<a href="javascript:void(0)" onclick="edit_data(this)" id="edit" data-id_user="'.$field->id_user.'" class="btn btn-warning btn-sm" title="Edit"><i class="fas fa-edit"></i></a>
-            // <a href="javascript:void(0)" onclick="delete_data(this)" id="delete" data-id_user="'.$field->id_user.'" class="btn btn-danger btn-sm" title="Delete"><i class="fas fa-trash"></i></a>
-            // ';          
+            $row[] = '<a href="javascript:void(0)" onclick="edit_data(this)" id="edit" data-id_user="'.$field->id_user.'" class="btn btn-warning btn-sm" title="Edit"><i class="fas fa-edit"></i></a>
+            <a href="javascript:void(0)" onclick="delete_data(this)" id="delete" data-id_user="'.$field->id_user.'" class="btn btn-danger btn-sm" title="Delete"><i class="fas fa-trash"></i></a>
+            ';          
             $row[] = $field->id_user;
-            $row[] = $field->username;
-            $row[] = 'protected';
-            $row[] = $field->nm_lengkap;
-            $row[] = $field->alamat_lengkap;
-            $row[] = $field->email;
-            $row[] = $field->no_hp;            
+            $row[] = $field->usr;
+            $row[] = 'protected';                   
             $row[] = $status_aktif;                                  
             $data[] = $row;
         }
@@ -64,8 +60,6 @@ class Back_user extends CI_Controller {
         $id_user = $this->input->post('id_user');
         $username  = $this->input->post('username');
         $password = $this->input->post('password');
-        $tanggal = $this->input->post('tanggal');
-
         $stat   = $this->input->post('stat',TRUE); #EDIT / NEW
         $hasil  = 1;
         $err   = '';
@@ -73,21 +67,20 @@ class Back_user extends CI_Controller {
         if ($stat == 'new') 
         {
             $tanggal = date('Y-m-d');
-        	$id_user = $this->M_crud->id_num_month_year('tb_user','id_user','tgl_daftar');
+        	$id_user = $this->M_crud->id('tb_user','id_user','US');
         }
 
         $set_data = array(
             'id_user' => $id_user,
-            'username' => $username,
-            'password' => md5($password),
-            'tgl_daftar' => $tanggal,
-            'level'  	=> 1,
+            'usr' => $username,
+            'pswd' => md5($password),
+            'status_aktif'  	=> 0,
         );
 
         if ($stat == 'new') 
         {
             // CEK USER
-            $cek_user = $this->M_crud->tampil_data_where('tb_user', array('username' => $username))->result_array();
+            $cek_user = $this->M_crud->tampil_data_where('tb_user', array('usr' => $username))->result_array();
 
             if (count($cek_user) > 0) 
             {

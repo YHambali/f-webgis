@@ -20,7 +20,7 @@ class Back_login extends CI_Controller
 	{
 		$data = array(
 			'title_bar' => 'Login Form',
-			'auth_link' => 'auth-faylogic/proses',			
+			'auth_link' => 'login/proses',			
 		);
 		$this->load->view('back/form_login',$data);
 	}

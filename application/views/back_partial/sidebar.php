@@ -28,9 +28,8 @@
                 <li><a href="<?php echo base_url() ?>konten/data-rekam-bencana"><i class="ri-folder-3-fill"></i> <span>Data Rekam Bencana</span></a></li>
                 <li><a href="<?php echo base_url() ?>konten/data-daerah-rawan-bencana"><i class="ri-folder-3-fill"></i> <span>Daerah Rawan Bencana</span></a></li>
                 <li><a href="<?php echo base_url() ?>data-user"><i class="ri-folder-3-fill"></i> <span>Data User</span></a></li>
-                <li><a href="<?php echo base_url() ?>konten/blog"><i class="ri-folder-3-fill"></i> <span>Blog</span></a></li>
+                <!-- <li><a href="<?php echo base_url() ?>konten/blog"><i class="ri-folder-3-fill"></i> <span>Blog</span></a></li> -->
                 
-                <!-- <li><a href="<?php echo base_url() ?>user"><i class="ri-folder-3-fill"></i> <span>Data User</span></a></li> -->
 
             </ul>
         </div>
