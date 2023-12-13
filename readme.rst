@@ -68,3 +68,27 @@ Acknowledgement
 
 The CodeIgniter team would like to thank EllisLab, all the
 contributors to the CodeIgniter project and you, the CodeIgniter user.
+
+User
+![08 Dashboard User](https://github.com/YHambali/f-webgis/assets/146272181/404bf2d6-3bcb-4849-bc60-8c4b231f5ac4)
+![09 Data Bencana Submenu Data Rekam Bencana](https://github.com/YHambali/f-webgis/assets/146272181/f1d2fd92-64bc-4669-a50c-3fd506697e50)
+![10 Data Bencana](https://github.com/YHambali/f-webgis/assets/146272181/a2cd8ac0-9a99-41a6-be15-7c449e96340c)
+![11 Data Wilayah Karawang Submenu Data Desa](https://github.com/YHambali/f-webgis/assets/146272181/febd86ab-6e3b-453f-9c9c-55bd58f7fe81)
+![12 Data Wilayah Karawang Submenu Data Kecamatan](https://github.com/YHambali/f-webgis/assets/146272181/801789cb-db74-487c-9c12-8cc71dbaef40)
+![13 Peta Sebaran Daerah Rawan Bencana](https://github.com/YHambali/f-webgis/assets/146272181/12be5751-747b-49b1-9932-58f4432388a1)
+
+Admin
+![01 Login](https://github.com/YHambali/f-webgis/assets/146272181/7820f566-46dd-4b33-951a-34b1d1be229d)
+![02 Dashboard Admin](https://github.com/YHambali/f-webgis/assets/146272181/f8a95fbc-cf20-4b0d-a974-acba4f7bc3eb)
+![03 Data Wilayah Data Desa](https://github.com/YHambali/f-webgis/assets/146272181/26d808de-01e2-4780-955d-cb4f0cb4757b)
+![03 Data Wilayah Data Kecamatan](https://github.com/YHambali/f-webgis/assets/146272181/88a586c9-57bf-45c7-9c27-99408c08233e)
+![04 Data Bencana](https://github.com/YHambali/f-webgis/assets/146272181/9c8eac0c-4c3d-42da-beee-09bdbd7a95a5)
+![05 Data Rekam Bencana](https://github.com/YHambali/f-webgis/assets/146272181/54bd0280-0aab-40b3-9e8a-252ca6fb9359)
+![06 Daerah Rawan Bencana](https://github.com/YHambali/f-webgis/assets/146272181/449ccb1c-268c-4b3e-899a-ff0fc9402f0c)
+![07 Data User](https://github.com/YHambali/f-webgis/assets/146272181/600fe5a8-873e-46fb-8e38-875831d41f27)
+![08 Dashboard User](https://github.com/YHambali/f-webgis/assets/146272181/e5850d74-6fb2-4c27-bcc5-b51876d4ba01)
+![09 Data Bencana Submenu Data Rekam Bencana](https://github.com/YHambali/f-webgis/assets/146272181/838c5c33-2cab-4e74-9bd5-f594d9d0d6bf)
+![10 Data Bencana](https://github.com/YHambali/f-webgis/assets/146272181/dd15b878-92ba-4441-995d-ab8338036eb9)
+![11 Data Wilayah Karawang Submenu Data Desa](https://github.com/YHambali/f-webgis/assets/146272181/b854ea95-d416-47f7-852b-e5fef54e8a12)
+![12 Data Wilayah Karawang Submenu Data Kecamatan](https://github.com/YHambali/f-webgis/assets/146272181/873fecf3-99da-4489-9fcc-a79a81d4a176)
+![13 Peta Sebaran Daerah Rawan Bencana](https://github.com/YHambali/f-webgis/assets/146272181/ded6646b-3550-4e9c-9d17-c0ea5eeed2f3)
