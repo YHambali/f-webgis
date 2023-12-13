@@ -73,8 +73,3 @@ User
 
 
 Admin
-
-![10 Data Bencana](https://github.com/YHambali/f-webgis/assets/146272181/dd15b878-92ba-4441-995d-ab8338036eb9)
-![11 Data Wilayah Karawang Submenu Data Desa](https://github.com/YHambali/f-webgis/assets/146272181/b854ea95-d416-47f7-852b-e5fef54e8a12)
-![12 Data Wilayah Karawang Submenu Data Kecamatan](https://github.com/YHambali/f-webgis/assets/146272181/873fecf3-99da-4489-9fcc-a79a81d4a176)
-![13 Peta Sebaran Daerah Rawan Bencana](https://github.com/YHambali/f-webgis/assets/146272181/ded6646b-3550-4e9c-9d17-c0ea5eeed2f3)
